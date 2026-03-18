@@ -64,6 +64,8 @@ list-style-type: none;
 font-size: 22px;
 background-color:  var(--blocks-color);
 border: var(--block-border);
+width: 15rem;
+overflow: auto;
 }
 
 .classcheck {
@@ -92,5 +94,15 @@ border: var(--block-border);
     'timer'
     'playlist'
     'footer';
+    grid-gap: 10px;
+  }
+
+  .container_box {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  input.tasktext {
+    width: 30vw;
   }
 }
