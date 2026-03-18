@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #FFC8DD;
+  --blocks-color: #CDB4DB;
+  --block-border: 1px solid #9578a5;
+  font-size: 16px;
+}
+
+html {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+section.content {
+  display: grid;
+  grid-template-areas: 
+  'header header header'
+  'tasks timer playlist'
+  'footer footer footer';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--primary-color);
+}
+
+.container_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var( --blocks-color); 
+  border: 1px black solid;
+}
+
+h2.container_box {
+  margin: auto;
+  width: 100%;
+  padding-left: 10px;
+}
+
+h1.header {
+    font-size: clamp(20px, 2vw + 2rem, 60px);
+    text-align: center;
+    grid-area: header;
+}
+
+.daily, .finished {
+  grid-area: tasks;
+}
+
+.timer {
+  grid-area: timer;
+}
+.playlist {
+  grid-area: playlist;
+}
+ul {
+list-style-type: none;
+}
+
+.tasktext {
+font-size: 22px;
+background-color:  var(--blocks-color);
+border: var(--block-border);
+}
+
+.classcheck {
+  appearance: none;
+}
+
+.insert {
+  padding: 5px;
+  overflow: auto;
+  max-width: 420px;
+}
+
+.finished .tasktext {
+  text-decoration: line-through;
+}
+
+.taskcheck:checked + .tasktext {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 750px) {
+  section.content {
+    grid-template-areas: 
+    'header'
+    'tasks'
+    'timer'
+    'playlist'
+    'footer';
+  }
+}
